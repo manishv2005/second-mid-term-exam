@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f4ec" />
+    <title>Little List — A To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <a class="brand" href="#" aria-label="Little List home">
+          <span class="brand-icon" aria-hidden="true">✓</span>
+          <span>little list</span>
+        </a>
+        <p>A little space for your to-dos</p>
+      </header>
+
+      <section class="todo-card" aria-labelledby="page-title">
+        <p class="date" id="today"></p>
+        <h1 id="page-title">A good day starts with a plan.</h1>
+        <p class="subtitle">Write it down, then take it one step at a time.</p>
+
+        <form class="add-form" id="task-form">
+          <label class="sr-only" for="task-input">New task</label>
+          <input
+            id="task-input"
+            name="task"
+            type="text"
+            placeholder="Type a task..."
+            maxlength="120"
+            autocomplete="off"
+            required
+          />
+          <button class="add-button" type="submit">Add task</button>
+        </form>
+
+        <div class="list-header">
+          <h2>Tasks <span class="count" id="task-count">0</span></h2>
+          <button class="clear-button" id="clear-completed" type="button" hidden>
+            Clear completed
+          </button>
+        </div>
+
+        <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        <p class="empty-state" id="empty-state">
+          <span class="empty-mark" aria-hidden="true">✳</span>
+          Nothing on the list yet. What's one small thing you'd like to do today?
+        </p>
+      </section>
+
+      <p class="footer-note"><span aria-hidden="true">↳</span> Your list stays right here on this device.</p>
+    </main>
+  </body>
+</html>

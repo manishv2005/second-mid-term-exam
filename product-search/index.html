@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f7f4" />
+    <title>Corner Goods — Shop</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="Corner Goods home">
+        <span class="brand-mark" aria-hidden="true">CG</span>
+        <span>Corner Goods</span>
+      </a>
+      <p class="header-note">A small shop for everyday things</p>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">THE SHOP</p>
+        <h1 id="page-title">Browse products</h1>
+        <p class="intro-copy">
+          Search by name or choose a category to find what you need.
+        </p>
+      </section>
+
+      <section class="catalog" aria-label="Product catalog">
+        <div class="catalog-top">
+          <div>
+            <h2>All products</h2>
+            <p class="result-count" id="result-count" aria-live="polite"></p>
+          </div>
+        </div>
+
+        <div class="filters" role="search">
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="10.8" cy="10.8" r="6.8" />
+                <path d="m16 16 4.5 4.5" />
+              </svg>
+            </span>
+            <span class="visually-hidden">Search products by name</span>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search all products"
+              autocomplete="off"
+            />
+          </label>
+
+          <label class="category-control">
+            <span class="visually-hidden">Choose a product category</span>
+            <select id="category-select">
+              <option value="all">All categories</option>
+            </select>
+            <span class="select-chevron" aria-hidden="true">⌄</span>
+          </label>
+        </div>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-sparkle" aria-hidden="true">✳</span>
+          <h3>No products found</h3>
+          <p>Try another search or choose a different category.</p>
+          <button class="reset-button" id="reset-filters" type="button">Clear filters</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Corner Goods</span>
+      <span>Demo product catalog</span>
+    </footer>
+  </body>
+</html>
